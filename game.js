@@ -1,7 +1,9 @@
 const player = document.getElementById("player");
+const enemy = document.getElementById("enemy");
 
 let x = 280;
 let y = 180;
+let enemyY = 20;
 
 document.addEventListener("keydown", function(event){
 
@@ -16,3 +18,15 @@ document.addEventListener("keydown", function(event){
     player.style.top=y+"px";
 
 });
+
+setInterval(function(){
+
+    enemyY+=5;
+
+    if(enemyY>400){
+        enemyY=20;
+    }
+
+    enemy.style.top=enemyY+"px";
+
+},50);
